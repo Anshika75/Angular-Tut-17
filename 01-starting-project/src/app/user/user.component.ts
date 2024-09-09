@@ -16,4 +16,8 @@ export class UserComponent {
   get imagePath() {
     return 'assets/users/' + this.selectedUser.avatar
   }
+
+  onSelectedUser() {
+    console.log('User selected: ', this.selectedUser);
+  }
 }

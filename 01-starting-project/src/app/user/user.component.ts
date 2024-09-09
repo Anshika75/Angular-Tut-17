@@ -18,6 +18,6 @@ export class UserComponent {
   }
 
   onSelectedUser() {
-    console.log('User selected: ', this.selectedUser);
+    console.log('User selected: ', this.selectedUser.name);
   }
 }

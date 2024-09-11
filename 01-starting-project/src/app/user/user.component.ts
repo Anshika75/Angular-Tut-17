@@ -18,8 +18,9 @@ export class UserComponent {
   // name = input<string>("John Doe");
   // imagePath = computed(() => 'assets/users/' + this.avatar());
 
-  // @Output() select = new EventEmitter<string>();
-  select = output<string>();
+  @Output() select = new EventEmitter<string>();
+
+  // select = output<string>();
 
   get imagePath() {
     return 'assets/users/' + this.avatar;

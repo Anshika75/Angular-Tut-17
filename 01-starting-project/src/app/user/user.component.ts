@@ -11,15 +11,15 @@ import { DUMMY_USERS } from '../dummy-user';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  // @Input({required: true}) avatar!: string;
-  // @Input({required: true}) name!: string;
+  @Input({required: true}) avatar!: string;
+  @Input({required: true}) name!: string;
 
-  avatar = input<string>("");
-  name = input<string>("John Doe");
-  imagePath = computed(() => 'assets/users/' + this.avatar());
-  // get imagePath() {
-  //   return 'assets/users/' + this.avatar;
-  // }
+  // avatar = input<string>("");
+  // name = input<string>("John Doe");
+  // imagePath = computed(() => 'assets/users/' + this.avatar());
+  get imagePath() {
+    return 'assets/users/' + this.avatar;
+  }
   // selectedUser = signal(DUMMY_USERS[randomIndex]);
   // imagePath = computed(() => 'assets/users/' + this.selectedUser().avatar);
 

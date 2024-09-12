@@ -23,5 +23,5 @@
                 [name]="users[4].name ? users[4].name : 'John Doe'" (select)="onSelectedUser($event)" />
         </li>
     </ul>
-    <app-tasks [name]="selectedUser.name ? selectedUser.name : 'John Doe'" />
+    <app-tasks [name]="selectedUserName ? selectedUserName : 'John Doe'" />
 </main>

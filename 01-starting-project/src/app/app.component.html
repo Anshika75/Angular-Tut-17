@@ -22,5 +22,5 @@
                 [name]="users[4].name ? users[4].name : 'John Doe'" />
         </li>
     </ul>
-    <app-tasks [name]="selectedUser ? selectedUser.name : 'John Doe'" />
+    <app-tasks [name]="selectedUser.name ? selectedUser.name : 'John Doe'" />
 </main>

@@ -6,7 +6,6 @@ export const DUMMY_USERS = [
     },
     {
       id: 'u2',
-      name: 'Emily Thompson',
       avatar: 'user-2.jpg',
     },
     {

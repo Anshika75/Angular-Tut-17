@@ -13,7 +13,7 @@ import { DUMMY_USERS } from '../dummy-user';
 export class UserComponent {
   @Input({required: true}) id!: string;
   @Input({required: true}) avatar!: string;
-  @Input({required: true}) name!: string;
+  @Input({required: true}) name: string | undefined;
   // avatar = input<string>("");
   // name = input<string>("John Doe");
   // imagePath = computed(() => 'assets/users/' + this.avatar());

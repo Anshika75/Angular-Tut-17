@@ -2,7 +2,11 @@ import { Component, signal, computed, Input, input, Output, output, EventEmitter
 import { DUMMY_USERS } from '../dummy-user';
 
 // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-
+interface user {
+  id: string;
+  name?: string | undefined;
+  avatar: string;
+}
 @Component({
   selector: 'app-user',
   standalone: true,
@@ -11,11 +15,12 @@ import { DUMMY_USERS } from '../dummy-user';
   styleUrl: './user.component.css'
 })
 export class UserComponent {
-  @Input({required: true}) user!:{
-    id: string;
-    name?: string | undefined;
-    avatar: string;
-  };
+  @Input({required:true}) user!: user;
+  // @Input({required: true}) user!:{
+  //   id: string;
+  //   name?: string | undefined;
+  //   avatar: string;
+  // };
   // avatar = input<string>("");
   // name = input<string>("John Doe");
   // imagePath = computed(() => 'assets/users/' + this.avatar());

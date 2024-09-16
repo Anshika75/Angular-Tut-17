@@ -2,11 +2,7 @@ import { Component, signal, computed, Input, input, Output, output, EventEmitter
 import { DUMMY_USERS } from '../dummy-user';
 
 // const randomIndex = Math.floor(Math.random() * DUMMY_USERS.length);
-interface user {
-  id: string;
-  name?: string | undefined;
-  avatar: string;
-}
+
 @Component({
   selector: 'app-user',
   standalone: true,

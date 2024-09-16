@@ -17,6 +17,7 @@ import { type user } from './user.model';
 })
 export class UserComponent {
   @Input({required:true}) user!: user;
+  @Input({required:true}) selected!: boolean;
   // @Input({required: true}) user!:{
   //   id: string;
   //   name?: string | undefined;

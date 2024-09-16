@@ -9,6 +9,7 @@ import { TaskComponent } from "./task/task.component";
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
+  @Input({required: true}) userId!: string | undefined;
   @Input() name: string | undefined;
   Tasks = [
     {
@@ -34,5 +35,9 @@ export class TasksComponent {
         'Prepare and describe an issue template which will help with project management',
       dueDate: '2024-06-15',
     },
-  ]
+  ];
+
+  get SelectedUserTasks() {
+    return this.Tasks.filter((task) => task.userId === this.userId);
+  }
 }

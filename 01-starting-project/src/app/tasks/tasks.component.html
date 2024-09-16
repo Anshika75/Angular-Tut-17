@@ -6,7 +6,7 @@
         </menu>
     </header>
     <ul>
-        @for(task of Tasks; track task.id){
+        @for(task of SelectedUserTasks; track task.id){
             <li>
                 <app-task [task]="task"/>
             </li>            

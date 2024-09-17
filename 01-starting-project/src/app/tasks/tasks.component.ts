@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { TaskComponent } from "./task/task.component";
 
 @Component({
@@ -11,6 +11,7 @@ import { TaskComponent } from "./task/task.component";
 export class TasksComponent {
   @Input({required: true}) userId!: string | undefined;
   @Input() name: string | undefined;
+  @Output() complete = new EventEmitter<string>();
   Tasks = [
     {
       id: 't1',
@@ -36,8 +37,13 @@ export class TasksComponent {
       dueDate: '2024-06-15',
     },
   ];
+  task: any;
 
   get SelectedUserTasks() {
     return this.Tasks.filter((task) => task.userId === this.userId);
+  }
+
+  onCompleted() {
+    this.complete.emit(this.task.id);
   }
 }

@@ -17,6 +17,7 @@ import { Task } from './task.model';
   templateUrl: './task.component.html',
   styleUrl: './task.component.css'
 })
+
 export class TaskComponent {
   @Input({required: true}) task!: Task;
   @Output() complete = new EventEmitter<string>();

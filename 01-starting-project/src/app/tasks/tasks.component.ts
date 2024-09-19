@@ -12,7 +12,7 @@ import { type NewTaskData } from './task/task.model';
 })
 export class TasksComponent {
   @Input({required: true}) userId!: string | undefined;
-  @Input() name: string | undefined;
+  @Input({required: true}) name: string | undefined;
   isAddingTask = false;
   
   Tasks = [
@@ -57,13 +57,17 @@ export class TasksComponent {
   }
 
   onAddTask(taskData: NewTaskData) {
-    this.Tasks.push({
-      id: Math.random().toString(),
-      userId: this.userId,
-      title: taskData.title,
-      summary: taskData.summary,
-      dueDate: taskData.dueDate,
-    });
-    this.isAddingTask = false;
+    if (this.userId) {
+      this.Tasks.push({
+        id: new Date().getTime().toString(),
+        userId: this.userId,
+        title: taskData.title,
+        summary: taskData.summary,
+        dueDate: taskData.dueDate,
+      });
+      this.isAddingTask = false;
+    } else {
+      console.error('userId is undefined');
+    }
   }
 }

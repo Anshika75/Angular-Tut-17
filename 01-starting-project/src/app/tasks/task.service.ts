@@ -1,6 +1,6 @@
 import { NewTaskData } from "./task/task.model";
 
-class TaskService {
+export class TaskService {
 
     private Tasks = [
         {

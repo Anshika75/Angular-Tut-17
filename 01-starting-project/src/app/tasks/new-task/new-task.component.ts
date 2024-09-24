@@ -12,7 +12,7 @@ import { TaskService } from '../task.service';
 })
 export class NewTaskComponent {
   @Input({required:true}) userId!: string;
-  @Output() cancel = new EventEmitter<void>();
+  @Output() close = new EventEmitter<void>();
   // @Output() add = new EventEmitter<NewTaskData>();
   enteredTitle = '';
   enteredSummary = '';
@@ -20,8 +20,8 @@ export class NewTaskComponent {
 
   private tasksService = inject(TaskService)
 
-  onCancel() {
-    this.cancel.emit();
+  onClose() {
+    this.close.emit();
   }
   onSubmit() {
     // this.add.emit({

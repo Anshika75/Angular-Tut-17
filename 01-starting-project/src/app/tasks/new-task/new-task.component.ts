@@ -11,7 +11,7 @@ import { TaskService } from '../task.service';
   styleUrl: './new-task.component.css'
 })
 export class NewTaskComponent {
-  @Input() userId!: string;
+  @Input({required:true}) userId!: string;
   @Output() cancel = new EventEmitter<void>();
   // @Output() add = new EventEmitter<NewTaskData>();
   enteredTitle = '';

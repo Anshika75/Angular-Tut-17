@@ -49,9 +49,9 @@ export class TasksComponent {
     return this.userId ? this.tasksService.getUserTasks(this.userId) : [];
   }
 
-  onCompleteTask(id: string) {
-    // this.Tasks = this.Tasks.filter((task) => task.id !== taskId);
-  }
+  // onCompleteTask(id: string) {
+  //   // this.Tasks = this.Tasks.filter((task) => task.id !== taskId);
+  // }
 
   onStartAddTask() {
     this.isAddingTask = true;
@@ -60,18 +60,18 @@ export class TasksComponent {
     this.isAddingTask = false;
   }
 
-  onAddTask(taskData: NewTaskData) {
-    // if (this.userId) {
-    //   this.Tasks.unshift({
-    //     id: new Date().getTime().toString(),
-    //     userId: this.userId,
-    //     title: taskData.title,
-    //     summary: taskData.summary,
-    //     dueDate: taskData.dueDate,
-    //   });
-      this.isAddingTask = false;
-    // } else {
-    //   console.error('userId is undefined');
-    // }
-  }
+  // onAddTask(taskData: NewTaskData) {
+  //   // if (this.userId) {
+  //   //   this.Tasks.unshift({
+  //   //     id: new Date().getTime().toString(),
+  //   //     userId: this.userId,
+  //   //     title: taskData.title,
+  //   //     summary: taskData.summary,
+  //   //     dueDate: taskData.dueDate,
+  //   //   });
+  //     this.isAddingTask = false;
+  //   // } else {
+  //   //   console.error('userId is undefined');
+  //   // }
+  // }
 }

@@ -12,7 +12,7 @@ import { TaskService } from './task.service';
   styleUrl: './tasks.component.css'
 })
 export class TasksComponent {
-  @Input({required: true}) userId!: string | undefined;
+  @Input({required: true}) userId!: string;
   @Input({required: true}) name: string | undefined;
   isAddingTask = false;
   // private tasksService = new TaskService();

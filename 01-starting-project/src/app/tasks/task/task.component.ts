@@ -22,9 +22,10 @@ import { DatePipe } from '@angular/common';
 
 export class TaskComponent {
   @Input({required: true}) task!: Task;
-  @Output() complete = new EventEmitter<string>();
+  // @Output() complete = new EventEmitter<string>();
+  private tasksService = inject(TaskService);
   
   onCompleteTask() {
-    this.complete.emit(this.task.id);
+    // this.complete.emit(this.task.id);
   }
 }

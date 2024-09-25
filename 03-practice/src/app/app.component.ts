@@ -10,7 +10,7 @@ import { InvestmentInput } from './investment-input.model';
   imports: [HeaderComponent, UserInputComponent],
 })
 export class AppComponent {
-  calculateInvestmentResults(data: InvestmentInput) {
+  onCalculateInvestmentResults(data: InvestmentInput) {
     const { initialInvestment, annualInvestment, expectedReturn, duration } =
       data;
     const annualData = [];

@@ -8,8 +8,8 @@ import { TasksComponent } from "./tasks/tasks.component";
 import { CardComponent } from "./shared/card/card.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UserComponent],
-  imports: [BrowserModule, TasksComponent, CardComponent],
+  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TasksComponent],
+  imports: [BrowserModule],
   bootstrap: [AppComponent]
 })
 

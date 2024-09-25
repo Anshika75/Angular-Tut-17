@@ -11,9 +11,17 @@ import { TaskComponent } from "./tasks/task/task.component";
 import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TasksComponent, TaskComponent, NewTaskComponent],
-  imports: [BrowserModule, FormsModule],
-  bootstrap: [AppComponent]
+    declarations: [
+        AppComponent,
+        HeaderComponent,
+        UserComponent,
+        CardComponent,
+        TasksComponent,
+        TaskComponent,
+        NewTaskComponent
+    ],
+    imports: [BrowserModule, FormsModule],
+    bootstrap: [AppComponent]
 })
 
-export class AppModule {}
+export class AppModule { }

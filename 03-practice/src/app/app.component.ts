@@ -1,7 +1,8 @@
 import { Component } from '@angular/core';
+
 import { HeaderComponent } from './header/header.component';
 import { UserInputComponent } from './user-input/user-input.component';
-import { InvestmentInput } from './investment-input.model';
+import type { InvestmentInput } from './investment-input.model';
 
 @Component({
   selector: 'app-root',
@@ -32,6 +33,6 @@ export class AppComponent {
       });
     }
 
-    return annualData;
+    console.log(annualData);
   }
 }

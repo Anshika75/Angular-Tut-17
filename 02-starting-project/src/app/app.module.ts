@@ -10,8 +10,8 @@ import { TaskComponent } from "./tasks/task/task.component";
 import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TasksComponent],
-  imports: [BrowserModule, TaskComponent, NewTaskComponent],
+  declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TasksComponent, TaskComponent],
+  imports: [BrowserModule, NewTaskComponent],
   bootstrap: [AppComponent]
 })
 

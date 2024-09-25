@@ -6,10 +6,12 @@ import { HeaderComponent } from "./header/header.component";
 import { UserComponent } from "./user/user.component";
 import { TasksComponent } from "./tasks/tasks.component";
 import { CardComponent } from "./shared/card/card.component";
+import { TaskComponent } from "./tasks/task/task.component";
+import { NewTaskComponent } from "./tasks/new-task/new-task.component";
 
 @NgModule({
   declarations: [AppComponent, HeaderComponent, UserComponent, CardComponent, TasksComponent],
-  imports: [BrowserModule],
+  imports: [BrowserModule, TaskComponent, NewTaskComponent],
   bootstrap: [AppComponent]
 })
 

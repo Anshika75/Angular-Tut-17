@@ -17,6 +17,11 @@ export class UserInputComponent {
   enteredDuration = '10';
 
   onSubmit() {
-    this.calculate.emit()
+    this.calculate.emit({
+        initialInvestment: +this.enteredInitialInvestment,
+        duration: +this.enteredDuration,
+        expectedReturn: +this.enteredExpectedReturn,
+        annualInvestment: +this.enteredAnnualInvestment,
+    });
   }
 }

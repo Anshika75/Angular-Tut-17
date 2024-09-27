@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { ButtonComponent } from '../../../shared/button/button.component';
-import { ControlComponent } from "../../../shared/control/control.component";
+import { ControlComponent } from "../../../control/control.component";
 
 @Component({
   selector: 'app-new-ticket',

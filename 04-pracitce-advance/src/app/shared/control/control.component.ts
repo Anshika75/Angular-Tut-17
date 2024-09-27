@@ -13,11 +13,11 @@ import { Component, HostBinding, HostListener, input, ViewEncapsulation } from '
   }
 })
 export class ControlComponent {
-  // @HostBinding('class') className = 'control';
-  @HostListener('click') onClick() {
-    console.log('Control Component is clicked');
-  }
   label = input.required<string>();
+  // @HostBinding('class') className = 'control';
+  // @HostListener('click') onClick() {
+  //   console.log('Control Component is clicked');
+  // }
   // onClick() {
   //   console.log('Control Component is clicked');
   // }

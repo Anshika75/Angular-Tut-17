@@ -21,5 +21,6 @@ export class NewTicketComponent {
   onSubmit(title: string, description: string, form: HTMLFormElement) {
     console.log('Entered Title: ' + title);
     console.log('Entered Description: ' + description);
+    form.reset();
   }
 }

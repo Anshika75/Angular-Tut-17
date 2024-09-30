@@ -6,7 +6,7 @@
           'ticket-closed': false
         }"
       ></div>
-      <button>
+      <button (click)="onShowDetails()">
         <span class="text">{{data().title}}</span>
         <span>
           @if (detailsVisible()) {

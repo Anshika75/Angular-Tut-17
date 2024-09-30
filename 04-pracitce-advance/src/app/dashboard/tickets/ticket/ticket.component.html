@@ -9,7 +9,7 @@
       <button>
         <span class="text">{{data().title}}</span>
         <span>
-          @if (true) {
+          @if (detailsVisible()) {
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
@@ -43,7 +43,7 @@
       </button>
     </h3>
   
-    @if (true) {
+    @if (detailsVisible()) {
     <p>{{data().request}}</p>
   
     @if (data().status === 'open') {

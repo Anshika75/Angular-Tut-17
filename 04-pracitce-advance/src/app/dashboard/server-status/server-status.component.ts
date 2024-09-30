@@ -14,7 +14,7 @@ export class ServerStatusComponent implements OnInit, OnDestroy  {
   constructor() {
   }
   ngOnInit() {
-    setInterval(() => {
+    this.interval = setInterval(() => {
 
       const rnd = Math.random();
       if (rnd > 0.5) {

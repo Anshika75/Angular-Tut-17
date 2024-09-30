@@ -18,7 +18,7 @@ export class NewTicketComponent {
   //   // Submit the form
   // }
 
-  onSubmit(title: string, description: string) {
+  onSubmit(title: string, description: string, form: HTMLFormElement) {
     console.log('Entered Title: ' + title);
     console.log('Entered Description: ' + description);
   }

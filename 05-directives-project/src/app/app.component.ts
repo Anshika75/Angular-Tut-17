@@ -2,6 +2,7 @@ import { Component, inject } from '@angular/core';
 
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
+import { AuthService } from './auth/auth.service';
 
 @Component({
   selector: 'app-root',
@@ -11,5 +12,5 @@ import { LearningResourcesComponent } from './learning-resources/learning-resour
   imports: [AuthComponent, LearningResourcesComponent],
 })
 export class AppComponent {
-  private authService = inject(AuthComponent)
+  private authService = inject(AuthService)
 }

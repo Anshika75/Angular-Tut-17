@@ -71,3 +71,7 @@ article {
   p button:hover {
     color: #ec9fea;
   }
+
+  button{
+    cursor: pointer;
+  }

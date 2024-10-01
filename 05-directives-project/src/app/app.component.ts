@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
@@ -10,4 +10,6 @@ import { LearningResourcesComponent } from './learning-resources/learning-resour
   styleUrl: './app.component.css',
   imports: [AuthComponent, LearningResourcesComponent],
 })
-export class AppComponent {}
+export class AppComponent {
+  private authService = inject(AuthComponent)
+}

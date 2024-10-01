@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
 
 import { AuthComponent } from './auth/auth.component';
 import { LearningResourcesComponent } from './learning-resources/learning-resources.component';
@@ -13,4 +13,6 @@ import { AuthService } from './auth/auth.service';
 })
 export class AppComponent {
   private authService = inject(AuthService)
+  isAdmin = computed(() => this.authService.activePermission() === 'admin');
 }
+ 

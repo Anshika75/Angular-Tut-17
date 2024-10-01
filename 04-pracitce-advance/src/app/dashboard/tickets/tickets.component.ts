@@ -12,7 +12,7 @@ import { TicketComponent } from "./ticket/ticket.component";
 })
 export class TicketsComponent {
   tickets: Ticket[] = [];
-  onAdd(ticketdata: {title: string, text:string}){
+  onAdd(ticketdata: { title: string, text: string }) {
     const ticket: Ticket = {
       id: Math.random().toString(),
       title: ticketdata.title,
@@ -20,6 +20,18 @@ export class TicketsComponent {
       status: 'open'
     };
     this.tickets.push(ticket);
+  }
+
+  onCloseTicket(id: string) {
+    this.tickets = this.tickets.map((ticket) => {
+      if (ticket.id === id) {
+        return {
+          ...ticket,
+          status: 'closed'
+        };
+      }
+      return ticket;
+    });
   }
 
 }

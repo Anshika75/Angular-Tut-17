@@ -4,6 +4,10 @@
   <hr />
 
   <app-auth />
+  
+  @if(isAdmin()){
+    <p>Onlu admin can see this content</p>
+    
+  }
 
-  <p>Onlu admin can see this content</p>
 </main>

@@ -16,8 +16,6 @@ export class TasksListComponent {
   // tasks = this.tasksService.allTasks;
   tasks = computed(() =>{
     switch (this.selectedFilter()) {
-    case 'all':
-      return this.tasksService.allTasks();
     case 'open':
       return this.tasksService.allTasks().filter((task) => task.status === 'OPEN');
     case 'in-progress':

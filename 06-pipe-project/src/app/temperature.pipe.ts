@@ -1,7 +1,7 @@
 import { Pipe, PipeTransform } from '@angular/core';
 
 @Pipe({
-  name: 'temperature', 
+  name: 'temp', 
   standalone: true
 })
 

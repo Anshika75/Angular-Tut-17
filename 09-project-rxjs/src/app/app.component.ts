@@ -1,6 +1,6 @@
 import { Component, DestroyRef, effect, inject, OnInit, signal } from '@angular/core';
 import { toObservable, toSignal } from '@angular/core/rxjs-interop';
-import { interval, map } from 'rxjs';
+import { interval, map, Observable } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -13,7 +13,12 @@ export class AppComponent implements OnInit {
   clickCount$ = toObservable(this.clickCount);
   interval$ = interval(1000);
   intervalSignal = toSignal(this.interval$, {initialValue: 0});
-  
+  customInterval$ = new Observable((subscriber) => {
+    setInterval(() => {
+      subscriber.next();
+    }, 2000);
+  });
+
 
   constructor() {
     // effect(() => {

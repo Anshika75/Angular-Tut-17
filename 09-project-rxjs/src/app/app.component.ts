@@ -13,6 +13,7 @@ export class AppComponent implements OnInit {
   clickCount$ = toObservable(this.clickCount);
   interval$ = interval(1000);
   intervalSignal = toSignal(this.interval$, {initialValue: 0});
+  
 
   constructor() {
     // effect(() => {

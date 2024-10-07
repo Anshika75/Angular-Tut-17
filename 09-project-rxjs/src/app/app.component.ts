@@ -13,9 +13,18 @@ export class AppComponent implements OnInit {
   clickCount$ = toObservable(this.clickCount);
   interval$ = interval(1000);
   intervalSignal = toSignal(this.interval$, {initialValue: 0});
+  
   customInterval$ = new Observable((subscriber) => {
-    setInterval(() => {
-      subscriber.next();
+    let timesExecuted = 0;
+    const interval =  setInterval(() => {
+      if (timesExecuted > 3) {
+        clearInterval(interval);
+        subscriber.complete();
+        return;
+      }
+      console.log('Emitting new value ....');
+      subscriber.next({message: 'New value'});
+      timesExecuted++;
     }, 2000);
   });
 
@@ -38,8 +47,13 @@ export class AppComponent implements OnInit {
     // this.detroyRef.onDestroy(() => {
     //   subscription.unsubscribe();
     // });
-    this.clickCount$.subscribe({
-      next: (val) => console.log(val)
+    this.customInterval$.subscribe({
+      next: (val) => console.log(val),
+      complete: () => console.log('complete'),
+      error: (err) => console.log(err)
+    });
+    const subscription = this.clickCount$.subscribe({
+      next: (val) => console.log(`Clicked button ${this.clickCount()} times.`),
     });
     this.detroyRef.onDestroy(() => {
       console.log('destroy');

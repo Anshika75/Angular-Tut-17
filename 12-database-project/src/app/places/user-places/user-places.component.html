@@ -1,10 +1,10 @@
 <app-places-container title="Your Favorite Places">
   @if (isFetching() && !error()) {
-    <p class="fallback-text">Fetching available places...</p>
+    <p class="fallback-text">Fetching you favorite places...</p>
     }
   
     @if (error()) {
-    <p class="fallback-text">An error occurred while fetching available places.</p>
+    <p class="fallback-text">An error occurred while fetching you favorite places.</p>
     }
   
     @if (places()) {

@@ -27,7 +27,7 @@ export class UserPlacesComponent {
       map((resData) => resData.places),
       catchError((error) => {
         console.log(error);
-        return throwError(() => new Error('Something went wrong fetching the available places. Please try again later.'));
+        return throwError(() => new Error('Something went wrong fetching you favorite places. Please try again later.'));
       }
     )
     )

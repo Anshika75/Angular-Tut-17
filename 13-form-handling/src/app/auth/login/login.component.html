@@ -14,6 +14,12 @@
 
     <button class="button">Login</button>
   </div>
+  @if(emailIsInvalid){
+    <p class="control-error">Please enter a valid email address entered</p>
+  }
+  @if(passwordIsInvalid){
+    <p class="control-error">Please enter a valid password (must be at least 6 characters long and contain a question mark).</p>
+  }
 </form>
 
 <!-- Template Driven Approach -->

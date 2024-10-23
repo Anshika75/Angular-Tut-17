@@ -16,6 +16,16 @@ export class LoginComponent {
 
   constructor(){
     afterNextRender(() => {
+      const savedForm = window.localStorage.getItem('saved-login-form');
+
+      if (savedForm) {
+        const loadedFormData = (JSON.parse(savedForm));
+        const savedEmail = loadedFormData.email;
+        setTimeout(() => {
+          this.form().setValue({email: savedEmail});
+        }, 1);
+      }
+
       const subscription = this.form()
       .valueChanges?.pipe(debounceTime(500))
       .subscribe({
@@ -28,6 +38,7 @@ export class LoginComponent {
       this.destroyRef.onDestroy(() => subscription?.unsubscribe());
     })
   }
+
   onSubmit(formData: NgForm) {
     if (formData.invalid) {
       return;
@@ -35,5 +46,6 @@ export class LoginComponent {
     const enteredEmail = formData.form.value.email;
     const enteredPassword = formData.form.value.password;
     console.log(enteredEmail, enteredPassword);
+    formData.form.reset();
   }
 }
